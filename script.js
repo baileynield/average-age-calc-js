@@ -7,16 +7,16 @@ document.getElementById("average-age-btn").addEventListener("click", (e) => {
         Thor: 1055
     }
 
-    const averageAge = () => {
+    function averageAge(heroes) {
         let totalAge = 0;
         let numberOfAges = 0;
-        for (let name in superHeroes) {
-            totalAge += superHeroes[name];
+        for (let name in heroes) {
+            totalAge += heroes[name];
             numberOfAges++;
         }
         return totalAge / numberOfAges;
     }
 
-    const avgAge = averageAge();
+    const avgAge = averageAge(superHeroes);
     console.log(avgAge);
 })
